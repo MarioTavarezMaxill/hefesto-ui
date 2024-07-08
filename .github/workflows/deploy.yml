@@ -25,6 +25,11 @@ jobs:
       - name: Run build
         run: npm run build
 
+      - name: Clean working directory
+        run: |
+          git add .
+          git commit -m "Committing changes before version bump" || echo "No changes to commit"
+
       - name: Bump version and push
         id: bump_version
         run: |
