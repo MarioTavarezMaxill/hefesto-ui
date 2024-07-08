@@ -1,16 +1,55 @@
-# hefesto-ui
-Hefesto-UI is a versatile and robust library of web components designed to ensure seamless compatibility across various modern web development stacks. Whether you're working with Angular, React, Stencil, Astro, Vue, or any other framework, Hefesto-UI provides a consistent, high-quality set of components to streamline your development process.
+<h1 align="center">Hefesto UI</h1>
+<h3 align="center">Super Fast Library Web Components ⚡️</h3>
+<br />
 
-## Key Features:
-Cross-Framework Compatibility: Built with interoperability in mind, Hefesto-UI components are framework-agnostic and can be effortlessly integrated into any project, regardless of the underlying technology.
-Modular Design: Each component is designed to be modular and reusable, allowing for efficient code management and reduced redundancy.
-High Performance: Optimized for performance, Hefesto-UI ensures that your application remains fast and responsive, even as you scale.
-Customizable: Tailor each component to fit your design needs with extensive customization options, ensuring that your application looks and feels unique.
-Consistent Styling: Maintain a cohesive look and feel across your application with a unified set of styles that can be easily overridden to match your brand.
-Comprehensive Documentation: Detailed guides and API references provide everything you need to get started quickly and make the most of Hefesto-UI components.
+<p align="center">
+  <img alt="Bundle Size" src="https://badgen.net/bundlephobia/minzip/hefesto-ui"/>
+  <a href="https://github.com/MarioTavarezMaxill/hefesto-ui/blob/main/LICENSE">
+    <img alt="MIT License" src="https://img.shields.io/github/license/MarioTavarezMaxill/hefesto-ui"/>
+  </a>
+  <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/hefesto-ui.svg?style=flat"/>
+  <img alt="Github Stars" src="https://badgen.net/github/stars/MarioTavarezMaxill/hefesto-ui" />
+  <a href="https://discord.gg/your-invite-code">
+    <img alt="Discord" src="https://img.shields.io/discord/your-discord-server-id.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" />
+  </a>
+</p>
 
-## Use Cases:
-Enterprise Applications: Enhance your enterprise applications with a reliable set of components that support complex interactions and data visualization.
-Startups and MVPs: Quickly prototype and build your minimum viable product with a solid foundation of pre-built components.
-Open Source Projects: Contribute to and benefit from a growing community of developers committed to improving and expanding the Hefesto-UI library.
-Harness the power of Hefesto-UI to elevate your web development projects, ensuring compatibility, performance, and a beautiful user experience across all your applications.
+<br />
+
+Hefesto UI is a super fast library for Web Components. It streamlines the development of modern web applications and websites by providing reusable components that can be integrated with any technology, including Angular, React, Svelte, Astro, etc.
+
+## Table of contents
+
+- 📋 [Documentation](#documentation)
+- 🚀 [Features](#features)
+- 📦 [Installation](#installation)
+- 💻 [Usage](#usage)
+- ⚖️ [License](#license)
+
+## Documentation
+
+For the latest version of Hefesto UI, visit the [Documentation Site](https://your-documentation-site.com).
+
+## Features
+
+- **Ease of Styling**: Easily style your components with [describe how styling works].
+- **Flexible & Composable**: Components are built for endless composability.
+- **Accessible**: Follows WAI-ARIA guidelines with appropriate `aria-*` attributes.
+- **Dark Mode**: Compatible with dark mode out of the box.
+
+## Installation
+
+To use Hefesto UI, install the necessary packages:
+
+```sh
+# with Yarn
+$ yarn add hefesto-ui
+
+# with npm
+$ npm install hefesto-ui
+
+# with pnpm
+$ pnpm add hefesto-ui
+
+# with Bun
+$ bun add hefesto-ui
