@@ -5,13 +5,6 @@ export default {
 	title: 'Components/Atoms/Skeleton',
 	tags: ['autodocs'],
 	argTypes: {
-		loading: {
-			description:
-				'Determines if the skeleton loader is active. When set to true, the skeleton loader is displayed, indicating content is loading.',
-			control: {
-				type: 'boolean',
-			},
-		},
 		rows: {
 			description:
 				'Specifies the number of rows the skeleton loader will display. Useful for simulating the loading state of list or table-like structures.',
@@ -48,9 +41,8 @@ const Template = ({ loading, rows, cols, space, height }) =>
 
 export const Default = Template.bind({});
 Default.args = {
-	loading: true,
-	rows: 3,
-	cols: 3,
-	space: 3,
-	height: 8,
+	rows: 1,
+	cols: 1,
+	space: 8,
+	height: 7,
 };

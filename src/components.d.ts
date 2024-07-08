@@ -6,42 +6,47 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface DividerUi {
+    interface AlertUi {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface BadgeUi {
+    }
+    interface DividerUi {
+        "size": string;
+        "variant": 'solid' | 'dashed';
+    }
+    interface IndicatorUi {
     }
     interface SkeletonUi {
         "cols": number;
         "height": number;
-        "loading": boolean;
         "rows": number;
         "space": number;
     }
 }
 declare global {
+    interface HTMLAlertUiElement extends Components.AlertUi, HTMLStencilElement {
+    }
+    var HTMLAlertUiElement: {
+        prototype: HTMLAlertUiElement;
+        new (): HTMLAlertUiElement;
+    };
+    interface HTMLBadgeUiElement extends Components.BadgeUi, HTMLStencilElement {
+    }
+    var HTMLBadgeUiElement: {
+        prototype: HTMLBadgeUiElement;
+        new (): HTMLBadgeUiElement;
+    };
     interface HTMLDividerUiElement extends Components.DividerUi, HTMLStencilElement {
     }
     var HTMLDividerUiElement: {
         prototype: HTMLDividerUiElement;
         new (): HTMLDividerUiElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLIndicatorUiElement extends Components.IndicatorUi, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLIndicatorUiElement: {
+        prototype: HTMLIndicatorUiElement;
+        new (): HTMLIndicatorUiElement;
     };
     interface HTMLSkeletonUiElement extends Components.SkeletonUi, HTMLStencilElement {
     }
@@ -50,38 +55,35 @@ declare global {
         new (): HTMLSkeletonUiElement;
     };
     interface HTMLElementTagNameMap {
+        "alert-ui": HTMLAlertUiElement;
+        "badge-ui": HTMLBadgeUiElement;
         "divider-ui": HTMLDividerUiElement;
-        "my-component": HTMLMyComponentElement;
+        "indicator-ui": HTMLIndicatorUiElement;
         "skeleton-ui": HTMLSkeletonUiElement;
     }
 }
 declare namespace LocalJSX {
-    interface DividerUi {
+    interface AlertUi {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface BadgeUi {
+    }
+    interface DividerUi {
+        "size"?: string;
+        "variant"?: 'solid' | 'dashed';
+    }
+    interface IndicatorUi {
     }
     interface SkeletonUi {
         "cols"?: number;
         "height"?: number;
-        "loading"?: boolean;
         "rows"?: number;
         "space"?: number;
     }
     interface IntrinsicElements {
+        "alert-ui": AlertUi;
+        "badge-ui": BadgeUi;
         "divider-ui": DividerUi;
-        "my-component": MyComponent;
+        "indicator-ui": IndicatorUi;
         "skeleton-ui": SkeletonUi;
     }
 }
@@ -89,8 +91,10 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "alert-ui": LocalJSX.AlertUi & JSXBase.HTMLAttributes<HTMLAlertUiElement>;
+            "badge-ui": LocalJSX.BadgeUi & JSXBase.HTMLAttributes<HTMLBadgeUiElement>;
             "divider-ui": LocalJSX.DividerUi & JSXBase.HTMLAttributes<HTMLDividerUiElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "indicator-ui": LocalJSX.IndicatorUi & JSXBase.HTMLAttributes<HTMLIndicatorUiElement>;
             "skeleton-ui": LocalJSX.SkeletonUi & JSXBase.HTMLAttributes<HTMLSkeletonUiElement>;
         }
     }

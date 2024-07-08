@@ -1,12 +1,28 @@
-import { Component, h } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'divider-ui',
   styleUrl: 'divider-ui.css',
-  shadow: true,
+  shadow: false,
 })
 export class DividerUi {
+  @Prop() size: string = '3';
+  @Prop() variant: 'solid' | 'dashed' = 'solid';
+
+
   render() {
-    return <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />;
+    const dividerClass = `${this.variant === 'dashed' ? 'border-dashed' : 'border-solid'}`;
+
+    return (
+      <div
+        class={`flex items-center text-sm leading-5 ${dividerClass}`}
+        style={{
+          height: `${this.size}px`,
+          borderTopWidth: `${this.size}px`,
+        }}
+      >
+        <div class={`w-full border-t rounded-lg bg-gray-300`}></div>
+      </div>
+    );
   }
 }
