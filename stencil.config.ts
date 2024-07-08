@@ -6,7 +6,6 @@ import nodePolyfills from 'rollup-plugin-node-polyfills';
 
 export const config: Config = {
 	namespace: 'hefesto-ui',
-	globalStyle: 'www/tailwind.css',
 	plugins: [
 		tailwind(),
 		tailwindHMR(),
