@@ -7,14 +7,38 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AlertUi {
+        "addRole": boolean;
+        "colorScheme": | 'whiteAlpha'
+		| 'blackAlpha'
+		| 'gray'
+		| 'red'
+		| 'orange'
+		| 'yellow'
+		| 'green'
+		| 'teal'
+		| 'blue'
+		| 'cyan'
+		| 'purple'
+		| 'pink';
+        "fullWidth": boolean;
+        "size": 'sm' | 'md' | 'lg';
+        "status": 'info' | 'warning' | 'success' | 'error' | 'loading';
+        "variant": 'subtle' | 'left-accent' | 'top-accent' | 'solid';
     }
     interface BadgeUi {
+        "colorScheme": 'default' | 'dark' | 'red' | 'green' | 'yellow' | 'indigo' | 'purple' | 'pink';
+        "size": 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+        "text": string;
+        "variant": 'solid' | 'subtle' | 'outline';
     }
     interface DividerUi {
         "size": string;
         "variant": 'solid' | 'dashed';
     }
     interface IndicatorUi {
+        "background": boolean;
+        "color": 'blue' | 'green' | 'red' | 'yellow' | 'indigo' | 'purple' | 'pink';
+        "text": string;
     }
     interface SkeletonUi {
         "cols": number;
@@ -64,14 +88,38 @@ declare global {
 }
 declare namespace LocalJSX {
     interface AlertUi {
+        "addRole"?: boolean;
+        "colorScheme"?: | 'whiteAlpha'
+		| 'blackAlpha'
+		| 'gray'
+		| 'red'
+		| 'orange'
+		| 'yellow'
+		| 'green'
+		| 'teal'
+		| 'blue'
+		| 'cyan'
+		| 'purple'
+		| 'pink';
+        "fullWidth"?: boolean;
+        "size"?: 'sm' | 'md' | 'lg';
+        "status"?: 'info' | 'warning' | 'success' | 'error' | 'loading';
+        "variant"?: 'subtle' | 'left-accent' | 'top-accent' | 'solid';
     }
     interface BadgeUi {
+        "colorScheme"?: 'default' | 'dark' | 'red' | 'green' | 'yellow' | 'indigo' | 'purple' | 'pink';
+        "size"?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+        "text"?: string;
+        "variant"?: 'solid' | 'subtle' | 'outline';
     }
     interface DividerUi {
         "size"?: string;
         "variant"?: 'solid' | 'dashed';
     }
     interface IndicatorUi {
+        "background"?: boolean;
+        "color"?: 'blue' | 'green' | 'red' | 'yellow' | 'indigo' | 'purple' | 'pink';
+        "text"?: string;
     }
     interface SkeletonUi {
         "cols"?: number;

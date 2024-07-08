@@ -23,7 +23,12 @@ export class AlertUi {
 	@Prop() size: 'sm' | 'md' | 'lg' = 'sm';
 	@Prop() status: 'info' | 'warning' | 'success' | 'error' | 'loading' = 'info';
 	@Prop() variant: 'subtle' | 'left-accent' | 'top-accent' | 'solid' = 'subtle';
+	@Prop() fullWidth: boolean = false;
 
+	/**
+	 * Returns the color classes based on the selected color scheme.
+	 * @returns {string} The color classes for the selected color scheme.
+	 */
 	private getColorClasses() {
 		const colors = {
 			whiteAlpha: 'text-white-800 bg-gray-200',
@@ -42,6 +47,10 @@ export class AlertUi {
 		return colors[this.colorScheme];
 	}
 
+	/**
+	 * Returns the status message based on the current status.
+	 * @returns The status message.
+	 */
 	private getStatusMessage() {
 		const messages = {
 			info: 'Info alert!',
@@ -53,6 +62,10 @@ export class AlertUi {
 		return messages[this.status];
 	}
 
+	/**
+	 * Returns the CSS classes based on the variant prop.
+	 * @returns {string} The CSS classes for the variant.
+	 */
 	private getVariantClasses() {
 		switch (this.variant) {
 			case 'left-accent':
@@ -67,6 +80,10 @@ export class AlertUi {
 		}
 	}
 
+	/**
+	 * Returns the CSS classes based on the size prop.
+	 * @returns {string} The CSS classes for the specified size.
+	 */
 	private getSizeClasses() {
 		const sizes = {
 			sm: 'text-sm p-4',
@@ -76,15 +93,26 @@ export class AlertUi {
 		return sizes[this.size];
 	}
 
+	/**
+	 * Returns the width classes based on the `fullWidth` property.
+	 * If `fullWidth` is true, returns 'w-full', otherwise returns 'w-auto'.
+	 *
+	 * @returns The width classes.
+	 */
+	private getWidthClasses() {
+		return this.fullWidth ? 'w-full' : 'w-auto';
+	}
+
 	render() {
 		const colorClasses = this.getColorClasses();
 		const variantClasses = this.getVariantClasses();
 		const sizeClasses = this.getSizeClasses();
+		const widthClasses = this.getWidthClasses();
 		const roleAttribute = this.addRole ? { role: 'alert' } : {};
 
 		return (
 			<div
-				class={`mb-4 rounded-lg ${colorClasses} ${variantClasses} ${sizeClasses}`}
+				class={`mb-4 rounded-lg ${colorClasses} ${variantClasses} ${sizeClasses} ${widthClasses}`}
 				{...roleAttribute}>
 				<span class='font-medium'>{this.getStatusMessage()}</span> Change a few
 				things up and try submitting again.

@@ -2,11 +2,7 @@ import { Config } from '@stencil/core';
 import { postcss } from '@stencil/postcss';
 import autoprefixer from 'autoprefixer';
 import tailwind, { tailwindHMR } from 'stencil-tailwind-plugin';
-
-const purgecss = require('@fullhuman/postcss-purgecss')({
-	content: ['./src/**/*.tsx', './src/**/*.css', './src/index.html'],
-	defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
-});
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 
 export const config: Config = {
 	namespace: 'hefesto-ui',
@@ -33,6 +29,10 @@ export const config: Config = {
 			customElementsExportBehavior: 'auto-define-custom-elements',
 			externalRuntime: false,
 		},
+    {
+      type: 'dist-custom-elements',
+      generateTypeDeclarations: true,
+    },
 		{
 			type: 'docs-readme',
 		},
@@ -41,7 +41,13 @@ export const config: Config = {
 			serviceWorker: null,
 		},
 	],
+  rollupPlugins: {
+    after: [
+      nodePolyfills(),
+    ]
+  },
 	testing: {
 		browserHeadless: 'new',
 	},
 };
+
