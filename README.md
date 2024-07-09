@@ -8,32 +8,19 @@
 
 
 <p align="center">
-  <img alt="Bundle Size" src="https://badgen.net/bundlephobia/minzip/hefesto-ui"/>
+  <img alt="Bundle Size" src="https://badgen.net/bundlephobia/minzip/hefesto-ui@1.0.5"/>
   <a href="https://github.com/MarioTavarezMaxill/hefesto-ui/blob/main/LICENSE">
     <img alt="MIT License" src="https://img.shields.io/github/license/MarioTavarezMaxill/hefesto-ui"/>
   </a>
   <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/hefesto-ui.svg?style=flat"/>
   <img alt="Github Stars" src="https://badgen.net/github/stars/MarioTavarezMaxill/hefesto-ui" />
-  <a href="https://discord.gg/your-invite-code">
-    <img alt="Discord" src="https://img.shields.io/discord/your-discord-server-id.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" />
-  </a>
 </p>
 
 <br />
 
 Hefesto UI is a super fast library for Web Components. It streamlines the development of modern web applications and websites by providing reusable components that can be integrated with any technology, including Angular, React, Svelte, Astro, etc.
 
-## Table of contents
 
-- 📋 [Documentation](#documentation)
-- 🚀 [Features](#features)
-- 📦 [Installation](#installation)
-- 💻 [Usage](#usage)
-- ⚖️ [License](#license)
-
-## Documentation
-
-For the latest version of Hefesto UI, visit the [Documentation Site](https://your-documentation-site.com).
 
 ## Features
 
@@ -41,6 +28,42 @@ For the latest version of Hefesto UI, visit the [Documentation Site](https://you
 - **Flexible & Composable**: Components are built for endless composability.
 - **Accessible**: Follows WAI-ARIA guidelines with appropriate `aria-*` attributes.
 - **Dark Mode**: Compatible with dark mode out of the box.
+
+## Browser Support
+
+![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png) | |
+--- | --- | --- | --- | --- | --- |
+Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ 
+
+
+
+## Installing
+
+### Package manager
+
+Using npm:
+
+```bash
+$ npm install axios
+```
+
+Using bower:
+
+```bash
+$ bower install axios
+```
+
+Using yarn:
+
+```bash
+$ yarn add axios
+```
+
+Using pnpm:
+
+```bash
+$ pnpm add axios
+```
 
 ## Usage
 <div align="center">
@@ -51,22 +74,3 @@ For the latest version of Hefesto UI, visit the [Documentation Site](https://you
     </tr>
   </table>
 </div>
-
-
-## Installation
-
-To use Hefesto UI, install the necessary packages:
-
-```sh
-# with Yarn
-$ yarn add hefesto-ui
-
-# with npm
-$ npm install hefesto-ui
-
-# with pnpm
-$ pnpm add hefesto-ui
-
-# with Bun
-$ bun add hefesto-ui
-
