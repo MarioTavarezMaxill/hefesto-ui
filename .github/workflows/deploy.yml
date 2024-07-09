@@ -41,7 +41,7 @@ jobs:
           NEW_VERSION=$(npm version patch -m "Upgrade to %s [skip ci]")
           git push origin HEAD:main --follow-tags
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Publish to npm
         run: npm publish
