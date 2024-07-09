@@ -3,6 +3,11 @@
 <br />
 
 <p align="center">
+  <img alt="Hefesto" src="https://github.com/MarioTavarezMaxill/hefesto-ui/assets/121114433/9da9fcac-efe2-422b-9a2a-ef61b8a4bb45"/>
+</p>
+
+
+<p align="center">
   <img alt="Bundle Size" src="https://badgen.net/bundlephobia/minzip/hefesto-ui"/>
   <a href="https://github.com/MarioTavarezMaxill/hefesto-ui/blob/main/LICENSE">
     <img alt="MIT License" src="https://img.shields.io/github/license/MarioTavarezMaxill/hefesto-ui"/>
@@ -37,6 +42,17 @@ For the latest version of Hefesto UI, visit the [Documentation Site](https://you
 - **Accessible**: Follows WAI-ARIA guidelines with appropriate `aria-*` attributes.
 - **Dark Mode**: Compatible with dark mode out of the box.
 
+## Usage
+<div align="center">
+  <table>
+    <tr>
+      <td><img alt="Daily Mix" src="https://github.com/MarioTavarezMaxill/hefesto-ui/assets/121114433/af3bdb57-e65b-4502-a150-2236b127336e"/></td>
+      <td><img width="2500px" alt="Code Snippet" src="https://github.com/MarioTavarezMaxill/hefesto-ui/assets/121114433/2950ffd3-eb7c-436b-b7cf-607dbc6cfbd1"/></td>
+    </tr>
+  </table>
+</div>
+
+
 ## Installation
 
 To use Hefesto UI, install the necessary packages:
@@ -53,3 +69,4 @@ $ pnpm add hefesto-ui
 
 # with Bun
 $ bun add hefesto-ui
+
