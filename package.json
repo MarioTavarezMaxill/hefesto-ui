@@ -1,6 +1,5 @@
 {
 	"name": "hefesto-ui",
-	"version": "1.0.1",
 	"keywords": [
 		"Design System",
 		"Web Components",
@@ -17,6 +16,7 @@
 		"UI Library",
 		"UI Design"
 	],
+	"version": "1.0.4",
 	"description": "Stencil Component Starter",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.js",
