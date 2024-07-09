@@ -5,7 +5,6 @@ import tailwind, { tailwindHMR } from 'stencil-tailwind-plugin';
 
 export const config: Config = {
 	namespace: 'hefesto-ui',
-	globalStyle: 'www/tailwind.css',
 	plugins: [
 		tailwind(),
 		tailwindHMR(),
