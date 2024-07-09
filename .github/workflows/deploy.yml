@@ -39,9 +39,13 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           CURRENT_VERSION=$(node -p "require('./package.json').version")
           NEW_VERSION=$(npm version patch -m "Upgrade to %s [skip ci]")
+          git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/MarioTavarezMaxill/hefesto-ui.git
           git push origin HEAD:main --follow-tags
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure npm for authentication
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Publish to npm
         run: npm publish
