@@ -1,6 +1,34 @@
+# Ignore storybook configuration and directories
 .storybook
+
+# Ignore node modules
 node_modules
+
+# Ignore test files
 src/**/*.spec.ts
 src/**/*.test.ts
+
+# Ignore build output directories
 dist
 www
+
+# Ignore source maps
+*.map
+
+# Ignore storybook files
+*.stories.*
+
+# Ignore stats.html
+dist/stats.html
+
+# Ignore collection directory
+dist/collection
+
+# Additional exclusions for common unnecessary files
+.DS_Store
+Thumbs.db
+.vscode
+.idea
+*.log
+*.lock
+coverage
