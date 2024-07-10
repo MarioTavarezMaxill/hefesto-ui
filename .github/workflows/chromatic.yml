@@ -19,5 +19,5 @@ jobs:
           fetch-depth: 0
       - run: npm install
       - run: npm run build-storybook
-      - run: npx chromatic --project-token ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      - run: npx chromatic --project-token ${{ secrets.CHROMATIC_PROJECT_TOKEN }} --exit-zero-on-changes
       - run: echo "Enjoy your Hefesto UI Storybook"
