@@ -16,7 +16,7 @@
 		"UI Library",
 		"UI Design"
 	],
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "Stencil Component Starter",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.js",
