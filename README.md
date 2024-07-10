@@ -44,25 +44,25 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔
 Using npm:
 
 ```bash
-$ npm install axios
+$ npm install hefesto-ui
 ```
 
 Using bower:
 
 ```bash
-$ bower install axios
+$ bower install hefesto-ui
 ```
 
 Using yarn:
 
 ```bash
-$ yarn add axios
+$ yarn add hefesto-ui
 ```
 
 Using pnpm:
 
 ```bash
-$ pnpm add axios
+$ pnpm add hefesto-ui
 ```
 
 ## Usage
