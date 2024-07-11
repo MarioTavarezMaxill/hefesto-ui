@@ -31,6 +31,9 @@ export namespace Components {
         "text": string;
         "variant": 'solid' | 'subtle' | 'outline';
     }
+    interface ButtonUi {
+        "gradient": string;
+    }
     interface DividerUi {
         "size": string;
         "variant": 'solid' | 'dashed';
@@ -47,6 +50,10 @@ export namespace Components {
         "space": number;
     }
 }
+export interface ButtonUiCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLButtonUiElement;
+}
 declare global {
     interface HTMLAlertUiElement extends Components.AlertUi, HTMLStencilElement {
     }
@@ -59,6 +66,23 @@ declare global {
     var HTMLBadgeUiElement: {
         prototype: HTMLBadgeUiElement;
         new (): HTMLBadgeUiElement;
+    };
+    interface HTMLButtonUiElementEventMap {
+        "onClick": void;
+    }
+    interface HTMLButtonUiElement extends Components.ButtonUi, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLButtonUiElementEventMap>(type: K, listener: (this: HTMLButtonUiElement, ev: ButtonUiCustomEvent<HTMLButtonUiElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLButtonUiElementEventMap>(type: K, listener: (this: HTMLButtonUiElement, ev: ButtonUiCustomEvent<HTMLButtonUiElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLButtonUiElement: {
+        prototype: HTMLButtonUiElement;
+        new (): HTMLButtonUiElement;
     };
     interface HTMLDividerUiElement extends Components.DividerUi, HTMLStencilElement {
     }
@@ -81,6 +105,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "alert-ui": HTMLAlertUiElement;
         "badge-ui": HTMLBadgeUiElement;
+        "button-ui": HTMLButtonUiElement;
         "divider-ui": HTMLDividerUiElement;
         "indicator-ui": HTMLIndicatorUiElement;
         "skeleton-ui": HTMLSkeletonUiElement;
@@ -112,6 +137,10 @@ declare namespace LocalJSX {
         "text"?: string;
         "variant"?: 'solid' | 'subtle' | 'outline';
     }
+    interface ButtonUi {
+        "gradient"?: string;
+        "onOnClick"?: (event: ButtonUiCustomEvent<void>) => void;
+    }
     interface DividerUi {
         "size"?: string;
         "variant"?: 'solid' | 'dashed';
@@ -130,6 +159,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "alert-ui": AlertUi;
         "badge-ui": BadgeUi;
+        "button-ui": ButtonUi;
         "divider-ui": DividerUi;
         "indicator-ui": IndicatorUi;
         "skeleton-ui": SkeletonUi;
@@ -141,6 +171,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "alert-ui": LocalJSX.AlertUi & JSXBase.HTMLAttributes<HTMLAlertUiElement>;
             "badge-ui": LocalJSX.BadgeUi & JSXBase.HTMLAttributes<HTMLBadgeUiElement>;
+            "button-ui": LocalJSX.ButtonUi & JSXBase.HTMLAttributes<HTMLButtonUiElement>;
             "divider-ui": LocalJSX.DividerUi & JSXBase.HTMLAttributes<HTMLDividerUiElement>;
             "indicator-ui": LocalJSX.IndicatorUi & JSXBase.HTMLAttributes<HTMLIndicatorUiElement>;
             "skeleton-ui": LocalJSX.SkeletonUi & JSXBase.HTMLAttributes<HTMLSkeletonUiElement>;
