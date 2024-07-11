@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 import './indicator-ui';
 
 export default {
-  title: 'Components/Atoms/Indicator',
+  title: 'Components/Molecules/Indicator',
   tags: ['autodocs'],
   argTypes: {
     text: {

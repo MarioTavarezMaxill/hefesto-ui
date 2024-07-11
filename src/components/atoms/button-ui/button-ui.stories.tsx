@@ -16,7 +16,7 @@ export default {
         'red-yellow', 'blue-green', 'pink-purple', 'cyan-blue',
         'yellow-orange', 'blue-indigo', 'teal-green', 'golden-pink',
         'violet-indigo', 'magenta-pink', 'orange-red', 'cyan-green',
-        'silver-blue'
+        'silver-blue', 'maxi-color',
       ],
       control: { type: 'select' },
     },
@@ -129,4 +129,10 @@ export const SilverBlue = Template.bind({});
 SilverBlue.args = {
   text: 'Silver Blue',
   gradient: 'silver-blue',
+};
+
+export const MaxiColor = Template.bind({});
+MaxiColor.args = {
+  text: 'Maxi Color',
+  gradient: 'maxi-color',
 };
