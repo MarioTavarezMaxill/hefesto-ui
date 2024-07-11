@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 import './alert-ui';
 
 export default {
-	title: 'Components/Atoms/Alert',
+	title: 'Components/Molecules/Alert',
 	tags: ['autodocs'],
 	argTypes: {
 		addRole: {
