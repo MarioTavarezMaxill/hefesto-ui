@@ -160,3 +160,9 @@ ReactStyle.args = {
   text: 'React Style',
   gradient: 'react-style',
 };
+
+export const SvelteStyle = Template.bind({});
+SvelteStyle.args = {
+  text: 'Svelte Style',
+  gradient: 'svelte-style',
+};
