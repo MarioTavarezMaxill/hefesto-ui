@@ -41,6 +41,7 @@ export class ButtonUi {
       'astro-style': 'bg-gradient-to-r from-[#FFD700] via-[#FF69B4] to-[#FF4500]',
       'angular-style': 'bg-gradient-to-r from-[#FF4500] via-[#FF6347] to-[#FF0000]',
       'react-style': 'bg-gradient-to-r from-[#00BFFF] via-[#00FF7F] to-[#228B22]',
+      'svelte-style': 'bg-gradient-to-r from-[#FFD700] via-[#FF69B4] to-[#FF4500]',
     };
     return gradients[this.gradient] || gradients['blue-pink'];
   }
