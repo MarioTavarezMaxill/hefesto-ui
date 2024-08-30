@@ -136,3 +136,27 @@ MaxiColor.args = {
   text: 'Maxi Color',
   gradient: 'maxi-color',
 };
+
+export const BlueGreen2 = Template.bind({});
+BlueGreen2.args = {
+  text: 'Blue Green 2',
+  gradient: 'blue-green-2',
+};
+
+export const AstroStyle = Template.bind({});
+AstroStyle.args = {
+  text: 'Astro Style',
+  gradient: 'astro-style',
+};
+
+export const AngularStyle = Template.bind({});
+AngularStyle.args = {
+  text: 'Angular Style',
+  gradient: 'Angular-style',
+};
+
+export const ReactStyle = Template.bind({});
+ReactStyle.args = {
+  text: 'React Style',
+  gradient: 'react-style',
+};

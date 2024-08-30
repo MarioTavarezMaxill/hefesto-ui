@@ -37,6 +37,10 @@ export class ButtonUi {
       'cyan-green': 'bg-gradient-to-r from-[#00FFFF] via-[#7FFFD4] to-[#008000]',
       'silver-blue': 'bg-gradient-to-r from-[#C0C0C0] via-[#00BFFF] to-[#0000FF]',
       'maxi-color': 'bg-gradient-to-r from-[#4266B2] via-[#5B95E6] to-[#6EC323]',
+      'blue-green-2': 'bg-gradient-to-r from-[#00BFFF] via-[#00FF7F] to-[#228B22]',
+      'astro-style': 'bg-gradient-to-r from-[#FFD700] via-[#FF69B4] to-[#FF4500]',
+      'angular-style': 'bg-gradient-to-r from-[#FF4500] via-[#FF6347] to-[#FF0000]',
+      'react-style': 'bg-gradient-to-r from-[#00BFFF] via-[#00FF7F] to-[#228B22]',
     };
     return gradients[this.gradient] || gradients['blue-pink'];
   }
