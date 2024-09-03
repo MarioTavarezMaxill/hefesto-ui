@@ -166,3 +166,39 @@ SvelteStyle.args = {
   text: 'Svelte Style',
   gradient: 'svelte-style',
 };
+
+export const MongodbStyle = Template.bind({});
+MongodbStyle.args = {
+  text: 'Mongodb Style',
+  gradient: 'mongodb-style',
+};
+
+export const JiraStyle = Template.bind({});
+JiraStyle.args = {
+  text: 'Jira Style',
+  gradient: 'jira-style',
+};
+
+export const SlackStyle = Template.bind({});
+SlackStyle.args = {
+  text: 'Slack Style',
+  gradient: 'slack-style',
+};
+
+export const GithubStyle = Template.bind({});
+GithubStyle.args = {
+  text: 'Github Style',
+  gradient: 'github-style',
+};
+
+export const GitlabStyle = Template.bind({});
+GitlabStyle.args = {
+  text: 'Gitlab Style',
+  gradient: 'gitlab-style',
+};
+
+export const PostmanStyle = Template.bind({});
+PostmanStyle.args = {
+  text: 'Postman Style',
+  gradient: 'postman-style',
+};
